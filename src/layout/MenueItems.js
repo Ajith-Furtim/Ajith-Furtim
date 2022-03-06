@@ -5,6 +5,12 @@ import { ReactSVG } from 'react-svg';
 import FeatherIcon from 'feather-icons-react';
 import propTypes from 'prop-types';
 import versions from '../demoData/changelog.json';
+import interviewsImg from '../../src/assets/imges/job-interview.png';
+import scheduleImg from '../../src/assets/imges/waiting-list.png';
+import logout from '../../src/assets/imges/exit.png';
+import userImg from '../../src/assets/imges/user-img.png';
+
+
 
 const { SubMenu } = Menu;
 
@@ -54,7 +60,7 @@ const MenuItems = ({ darkMode, toggleCollapsed, topMenu, events }) => {
         icon={
           !topMenu && (
             <NavLink className="menuItem-iocn" to={`${path}/interviews`}>
-              <FeatherIcon icon="grid" />
+               <img className='nav-img' src={interviewsImg} alt="" />
             </NavLink>
           )
         }
@@ -71,7 +77,7 @@ const MenuItems = ({ darkMode, toggleCollapsed, topMenu, events }) => {
         icon={
           !topMenu && (
             <NavLink className="menuItem-iocn" to={`${path}/schedule`}>
-              <FeatherIcon icon="list" />
+                 <img src={scheduleImg} alt="" />
             </NavLink>
           )
         }
@@ -89,7 +95,7 @@ const MenuItems = ({ darkMode, toggleCollapsed, topMenu, events }) => {
         icon={
           !topMenu && (
             <NavLink className="menuItem-iocn" to={`${path}/profile`}>
-              <FeatherIcon icon="user" />
+               <img src={userImg} alt="" />
             </NavLink>
           )
         }
@@ -106,7 +112,7 @@ const MenuItems = ({ darkMode, toggleCollapsed, topMenu, events }) => {
         icon={
           !topMenu && (
             <NavLink className="menuItem-iocn" to={`${path}/logout`}>
-              <FeatherIcon icon="log-out" />
+               <img src={logout} alt="" />
             </NavLink>
           )
         }

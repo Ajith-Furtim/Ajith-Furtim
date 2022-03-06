@@ -96,9 +96,9 @@ const Product = () => {
             <Switch>
               <Suspense
                 fallback={
-                  <div className="spin d-flex align-center-v">
-                    <Spin />
-                  </div>
+                  <Cards headless>
+                    <Skeleton avatar active />
+                  </Cards>
                 }
               >
                 <Route exact path={path} component={Grid} />
@@ -108,10 +108,10 @@ const Product = () => {
 
             <Switch>
               <Suspense
-                fallback={
-                  <div className="spin d-flex align-center-v">
-                    <Spin />
-                  </div>
+                 fallback={
+                  <Cards headless>
+                    <Skeleton avatar active />
+                  </Cards>
                 }
               >
                 <Route exact path={path} component={Grid} />

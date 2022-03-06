@@ -43,6 +43,7 @@ const Interviewee = () => {
 			<Route path={`${path}/interviewerprofile`} component={InterviewProfile} />
       <Route path={`${path}/Profile`} component={Profile} /> */}
       
+      <Route path={path} component={IntervieweeInterviews} />
       <Route  path={`${path}/interviews`} component={Product} />
       <Route  path={`${path}/schedule`} component={Users} />
 			<Route path={`${path}/scheduledinterview`} component={ScheduledInterview} />
