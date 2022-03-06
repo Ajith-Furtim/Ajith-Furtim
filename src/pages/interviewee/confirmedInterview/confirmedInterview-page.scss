@@ -1,0 +1,213 @@
+
+.confirmedInterview_page_container {
+    width: 100%;
+    // background-color: #fff;
+    .schedule-card {
+        margin-top: 25px;
+    }
+.card-box {
+    border: 2px solid #e1dbdb;
+    background-color: #fff;
+    .ant-avatar {
+        width: 60px;
+        height: 60px;
+    }
+
+.card-head {
+    border-bottom: 1px solid #f0f0f0;
+    height: 70px;
+}
+.user-details{
+    border-bottom: 1px solid #f0f0f0;
+    height: 100px; 
+    .card-header {
+       padding-top: 25px;
+    }
+}
+.card-header {
+    display: flex;
+    padding: 15px;
+
+    h1{
+        padding-left: 10px;
+        color: #52c41a;
+        font-size: 25px;
+        font-weight: 700;
+    }
+    span.anticon.anticon-check-circle {
+        font-size: 35px;        
+        padding-top: 5px;
+    }
+    h4{
+        padding-top: 8px;
+        padding-left: 20px;
+    }
+}
+.footer-details{
+    display: flex;
+    padding: 15px;
+    i{
+		padding-left: 25px;
+	}
+    .res-btn{
+    background-color: orange;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    margin-top: 6px;
+    }
+    h3{
+        height: 13px;
+    }
+    h4{
+        color: #ddd0be;
+        font-weight: 400;
+    }
+    .date-time{
+        border-left: 2px solid orange;
+        padding-left: 15px;
+    }
+}
+}
+.card-box-payment{
+    border: 2px solid #e1dbdb;
+    background-color: #fff;
+.card-head {
+    border-bottom: 1px solid #f0f0f0;
+    height: 70px;
+    h3{
+        margin-top: 8px;
+    }
+}
+.user-details{
+    border-bottom: 1px solid #f0f0f0;
+    height: 100px; 
+    .card-header {
+       padding-top: 0px;
+    }
+    .rate-row{
+      height: 30px;  
+    }
+}
+.card-header {
+    padding: 15px;
+
+    h4.rupess{
+        width: 85px;
+    }
+    h4{
+        padding-top: 8px;
+        padding-left: 20px;
+        color: #9b9286;
+    }
+}
+.footer-details{
+    padding: 15px;
+    i{
+		padding-left: 25px;
+	}
+    .pay-btn-head{
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+    .pay-btn{
+    background-color: #5fad5f;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    margin-top: 6px;
+    width: 155px;
+    }
+    h3{
+        padding-left: 20px;
+    }
+    .total-rup{
+        width: 85px;
+        font-weight: bold;
+    }
+   
+
+}
+}
+.card-box-service{
+    border: 2px solid #e1dbdb;
+    background-color: #fff;
+.card-head {
+    border-bottom: 1px solid #f0f0f0;
+    height: 78px;
+}
+.card-header {
+    padding: 10px;
+
+    h3{
+        font-size: 18px;
+        height: 22px;
+    }
+    h4{
+        color: #9b9286;
+    }
+    .right-arrow{
+        margin-top: 23px;
+        font-size: 20px;
+        i{
+            cursor: pointer;
+        }
+    }
+}  
+}
+.card-box-help{
+    margin-top: 15px;
+  .ph-btn{
+    background-color: #ebe5e5;
+    border-radius: 5px;
+    border: none;
+    color: #0a0a0a;
+    i{
+        padding-left: 5px;
+        font-size: 15px;
+    }
+  }
+}
+}
+
+@media (max-width: 767px) {
+    .confirmedInterview_page_container{
+        .card-box {
+            .ant-avatar {
+                width: 105px;
+            }
+            .card-header h4{
+                padding-top: 0;
+            }
+        }
+        .ant-col-push-6{
+            left: 0% !important;
+        }
+         .card-box-service {
+            margin-top: 25px;
+        .card-head{
+            height: 100px !important;
+        }
+        .help-head{
+            height: 135px !important;
+            .ph-number{
+                margin-top: 0px;
+                font-size: 0px;
+                text-align: end;
+
+            }
+        }
+        
+    }
+}
+}
+
+@media (max-width: 400px) {
+    .confirmedInterview_page_container{
+        .ant-col-push-12 {
+            left: 35%;
+        }
+    
+}
+}

@@ -1,0 +1,191 @@
+$primary-bg-color: #F7B1AB;
+$secondary-bg-color: #807182;
+$font-color: rgba(202, 202, 202, 0.8);
+$form-border-color: rgba(0,0,0,.1);
+.schedule_page_container {
+    width: 100%;
+    background-color: #fff;
+    .ant-rate-star {
+        font-size: 15px;
+    }
+    .ant-card-bordered {
+        border: 2px solid #f0f0f0!important;
+    }
+    .ant-card-body {
+        cursor: auto;
+    }
+    span.ant-avatar.ant-avatar-circle.ant-avatar-image {
+        float: right;
+        margin-right: 20px;
+    }
+    .ant-input-affix-wrapper {
+        margin-top: 10px;
+    }
+    .schedule-container{
+        // padding-left: 60px;
+        .schedule-head{
+            padding-top: 30px;
+        }
+        h3 {
+            color: #3939e5;
+            line-height: 15px;
+        }
+        h4 {
+            color: #7878df;
+            line-height: 15px;
+            font-size: 13px;
+        }
+        h5 {
+            color: #9393e9;
+            line-height: 15px;
+            font-size: 13px;
+        }
+        .ant-card:hover {
+        background: #FFF  !important;
+        }
+        .ant-card-meta-description {
+            padding-top: 25px;
+            color: #363232;
+            font-weight: 500;
+        }
+        .ant-card {
+    cursor: auto;
+}
+        footer {
+            margin-top: 120px;
+  
+        & button {
+            border: 1px solid rgba(0,0,0,.2);
+            height: 45px;
+            line-height: 45px;
+            width: 160px;
+            border-radius: 50px;
+            background-color: #ff634d  !important;
+        }     
+    
+        & #next {
+            i{
+                padding-left: 35px;
+            }
+            background: $secondary-bg-color;
+            border: 1px solid transparent;
+            color: #fff;
+        }
+        & #resend {
+            i{
+                padding-left: 20px;
+            }
+            border: 1px solid transparent;
+            color: #fff;
+            background-color: #353a8b  !important;
+        }
+    }
+    }
+
+    .wrapper {
+        width: 340px;
+        margin-top: 21px;
+      }
+      .card-loader {
+        background-color: #fff;
+        box-shadow: 0 1px 2px 1px rgba(0,0,0,.08), 0 -1px 3px 0 rgba(0,0,0,0.06);
+        padding: 8px;
+        position: relative;
+        border-radius: 10px;
+        margin-bottom: 0;
+        height: 320px;
+        overflow: hidden;
+      
+        &:only-child {
+          margin-top:0;
+        }
+      
+        &:before {
+          content: '';
+          height: 110px;
+          display: block;
+          background-color: #ededed;
+          box-shadow: -48px 78px 0 -48px #ededed, -51px 102px 0 -51px #ededed;
+        }
+      
+        &:after {
+          content: '';
+          background-color: #333;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          animation-duration: 0.6s;
+          animation-iteration-count: infinite;
+          animation-name: loader-animate;
+          animation-timing-function: linear;
+          background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 30%, rgba(255,255,255,0) 81%);
+          background: -o-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 30%, rgba(255,255,255,0) 81%);
+          background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 30%, rgba(255,255,255,0) 81%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 );
+        }
+      }
+       
+      
+      // Loader animation
+      @keyframes loader-animate{
+       0%{
+          transform: translate3d(-100%, 0, 0);
+        }
+       100%{
+          transform: translate3d(100%, 0, 0);
+        }
+      }
+
+}
+
+
+
+@media (max-width: 767px) {
+    .schedule_page_container {
+        .ant-card.ant-card-bordered {
+            width: 325px !important;
+        }
+        .schedule-search{
+            text-align: center;
+        }
+        .ant-col-push-4{
+            left: 0 !important;
+        }
+    .schedule-container footer {
+        margin-top: 20px;
+        margin-left: -20px;
+    }   
+    i{
+        display: none;
+    } 
+   
+    
+}
+}
+
+@media (max-width:400px) { 
+    .schedule_page_container {
+        .ant-card.ant-card-bordered {
+            width: 270px !important;
+        }
+        .ant-col-push-4{
+            left: 0 !important;
+        }
+        i{
+            display: none;
+        }
+        button {
+      
+            height: 32px !important;
+            line-height: 32px !important;
+            width: 120px !important;
+        }   
+    
+}
+}
+  
+
+  
+  

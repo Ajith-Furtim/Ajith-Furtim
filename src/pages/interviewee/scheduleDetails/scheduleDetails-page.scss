@@ -1,0 +1,104 @@
+$primary-bg-color: #F7B1AB;
+$secondary-bg-color: #807182;
+$font-color: rgba(202, 202, 202, 0.8);
+$form-border-color: rgba(0,0,0,.1);
+.scheduleDetails_container {
+    width: 100%;
+    background-color: #fff;
+    .scheduleDetails-container {
+        margin: 25px;
+    }
+    .scheduleDetails-header{
+    .ant-rate-star {
+        font-size: 32px;
+    }
+    }
+    .user-img{
+    width: 150px;
+    border-radius: 50%;
+    height: 150px;
+    }
+    .user-details{
+        padding-top: 30px;
+        padding-left: 15px;
+
+        h2{
+            font-size: 25px;
+            height: 25px;
+        }
+    }
+    .user-info {
+        margin-top: 20px;
+    }  
+    .user-skill {
+        margin-top: 20px;
+        background-color: #eeeeee;
+        border-radius: 10px;
+        border-left: 5px solid orange;
+        h5{
+            height: 13px;
+            color: #a3b4ae;
+        }
+        .ant-row {
+            padding: 13px;
+            margin-left: 30px;
+        }
+    } 
+    .realated-info {
+        margin-top: 30px;
+        h3{
+            color: #5b5bb2;
+            height: 20px;
+        }
+        h1{
+            color: #5b5bb2;
+            font-size: 30px;
+            font-weight: 700;
+        }
+       
+    } 
+    .realated-users{
+        
+        .ant-rate-star {
+            font-size: 25px;
+            
+        }
+        .star-rate {
+            text-align: center;
+            padding-bottom: 15px;
+        }
+        .ant-avatar {
+            width: 45px;
+            height: 45px;
+        }
+        .card-footer {
+                margin-top: 30px;
+        }
+        h4 {
+            height: 13px;
+        }
+        h5{
+            color: #d8bebe;
+        }
+    }
+}
+
+
+
+@media (max-width: 767px) {
+    .scheduleDetails_container {
+           
+    
+}
+}
+
+@media (max-width:400px) { 
+    .scheduleDetails_container {
+          
+    
+}
+}
+  
+
+  
+  

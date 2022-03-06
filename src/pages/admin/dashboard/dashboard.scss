@@ -1,0 +1,67 @@
+.card1{
+  border-radius: 15px;
+  margin-right: 50px;
+  
+}
+.percentage{
+  color: green;
+}
+
+.sub-card{
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  background: #1890ff;
+  color: #fff;
+  border-radius: 0.5rem;
+  margin-left: auto;
+ 
+}
+.search{
+  float: right;
+margin-left: 50px;
+
+
+
+}
+.align{
+  margin-top: 25px;
+  padding: 25px;
+
+}
+.icon{
+  margin-top: -20px;
+}
+.graph-card{
+  // background-image: linear-gradient(#1890ff, #125ca1);
+  border-radius: 20px;
+
+}
+.card-button{
+  float: right;
+  border-radius: 50PX;
+}
+  .upload{
+    padding: 4px 470px;
+  }
+  .bell{
+    float: right;
+inline-size: 200px; 
+
+ }
+.time-line{
+  font-weight: 500;
+
+}
+
+.bar-chart{
+  width: 85%;
+}
+::ng-deep.signin{
+  border-radius: 50px !important;
+ margin-right: 100px;
+}
+.toggle-btn{
+  width: 370px !important;
+  
+}

@@ -1,0 +1,126 @@
+$primary-bg-color: #F7B1AB;
+$secondary-bg-color: #807182;
+$font-color: rgba(202, 202, 202, 0.8);
+$form-border-color: rgba(0,0,0,.1);
+.dashboard_page_container {
+    width: 100%;
+    background-color: #fff;
+    .ant-rate-star {
+        font-size: 15px;
+    }
+    .ant-card-bordered {
+        border: 2px solid #f0f0f0!important;
+    }
+    span.ant-avatar.ant-avatar-circle.ant-avatar-image {
+        float: right;
+        margin-right: 20px;
+    }
+    .ant-input-affix-wrapper {
+        margin-top: 10px;
+    }
+    .dashboard-container{
+        // padding-left: 60px;
+        .dasboard-head{
+            padding-top: 30px;
+        }
+        h3 {
+            color: #3939e5;
+            line-height: 15px;
+        }
+        h4 {
+            color: #7878df;
+            line-height: 15px;
+            font-size: 13px;
+        }
+        h5 {
+            color: #9393e9;
+            line-height: 15px;
+            font-size: 13px;
+        }
+        .ant-card:hover {
+        background: #FFF  !important;
+        }
+        .ant-card-meta-description {
+            padding-top: 25px;
+            color: #363232;
+            font-weight: 500;
+        }
+        .ant-card {
+    cursor: auto;
+}
+        footer {
+            margin-top: 50px;
+  
+        & button {
+            border: 1px solid rgba(0,0,0,.2);
+            height: 45px;
+            line-height: 45px;
+            width: 160px;
+            border-radius: 50px;
+            background-color: #ff634d  !important;
+        }     
+    
+        & #next {
+            i{
+                padding-left: 35px;
+            }
+            background: $secondary-bg-color;
+            border: 1px solid transparent;
+            color: #fff;
+        }
+        & #resend {
+            i{
+                padding-left: 20px;
+            }
+            border: 1px solid transparent;
+            color: #fff;
+            background-color: #353a8b  !important;
+        }
+    }
+    }
+
+}
+
+
+
+@media (max-width: 767px) {
+    .dashboard_page_container {
+        .ant-card.ant-card-bordered {
+            width: 325px !important;
+        }
+        .dasboard-search{
+            text-align: center;
+        }
+    .dashboard-container footer {
+        margin-top: 20px;
+        margin-left: -20px;
+    }   
+    // i{
+    //     display: none;
+    // } 
+   
+    
+}
+}
+
+@media (max-width:400px) { 
+    .dashboard_page_container {
+        .ant-card.ant-card-bordered {
+            width: 270px !important;
+        }
+        // i{
+        //     display: none;
+        // }
+        button {
+      
+            height: 32px !important;
+            line-height: 32px !important;
+            width: 120px !important;
+        }   
+    
+}
+}
+  
+
+  
+  

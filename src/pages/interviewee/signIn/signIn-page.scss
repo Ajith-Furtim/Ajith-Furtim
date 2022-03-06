@@ -1,0 +1,162 @@
+$primary-bg-color: #F7B1AB;
+$secondary-bg-color: #807182;
+$font-color: rgba(0,0,0,.8);
+$font-family: 'Montserrat',sans-serif;
+$form-border-color: rgba(0,0,0,.1);
+.signin_page_container {
+    width: 1000px;
+    .signin-container{
+        background-color: #fff;
+        // height: 70vh;
+    }
+    
+
+    .left-container{
+        padding:15px;
+        h4{
+            padding-top: 13px;
+        }        
+        & h1:nth-of-type(1) {
+                    color: $font-color;
+                    font-size: 28px;
+                    font-weight: 600;
+                }
+              
+                & .set {
+                    // justify-content: space-between;
+                    margin: 25px 0;
+                }
+              
+                & input {
+                  border: 1px solid $form-border-color;
+                  border-radius: 10px;
+                  height: 50px;
+                  line-height: 38px;
+                  padding-left:20px;
+                  background-color: #f6f4f4;
+                  width: 100%;
+                }
+              
+                & input, label {
+                    color: $font-color;
+                }
+                & label{
+                    display: block;
+                    margin-bottom: 5px;
+                    font-weight: 600;
+                }
+              
+                & header {
+                    padding: 40px 40px 0px 40px;
+                    &h4{
+                        padding-top: 13px;
+                    }
+                }
+                    footer {
+                    align-items: center;
+                    //   background: #fff;
+                    display: grid;
+                    padding-top: 15px;
+                
+                    & button {
+                        border: 1px solid rgba(0,0,0,.2);
+                        height: 45px;
+                        line-height: 45px;
+                        width: 160px;
+                        border-radius: 50px;
+                        font-family: $font-family;
+                        margin-left: 38px ;
+                        // background-color: #ff634d  !important;
+                        cursor: pointer;
+                    }
+                
+                    & #back {
+                        background: #fff;
+                        transition: .2s all ease-in-out;                        
+                        &:hover {
+                        background: #171A2B;
+                        color: white;
+                        }
+                    }
+                
+                    & #next {
+                        i{
+                            padding-left: 45px;
+                        }
+                        background-color: #ff634d  !important; 
+                        border: 1px solid transparent;
+                        color: #fff;
+                        
+                        // &:hover {
+                        // background: #171A2B;
+                        // }
+                      
+                    }
+                    & #resend {
+                        i{
+                            padding-left: 20px;
+                        }
+                        border: 1px solid transparent;
+                        color: #fff;
+                        background-color: #353a8b;
+                        
+                        // &:hover {
+                        // background: #171A2B;
+                        // }
+                        &i{
+                            padding-left: 25px;
+                        }
+                    }
+                    & h4{
+                        padding-top: 5px;
+                        }
+                    & img{
+                        width: 45px;
+                    }
+            }
+        }
+            .right-container {
+                // margin-top: -3px;
+                img{
+                    width: 375px;
+                }
+            }
+}
+
+
+@media (max-width: 767px) {
+    .signin_page_container {
+        .ant-col-push-1 {
+            left: 14%   !important;
+        }
+        i{
+            display: none;
+        }
+        button{
+            width: 100px !important;
+        }
+     
+            .left-container{
+                footer { 
+                    padding-top: 0 !important;
+                    // text-align: center;
+                    // padding-left: 28px;
+        
+        }
+          }
+
+    }
+  
+      
+}
+
+@media (min-width: 1100px) and (max-width: 1500px) {
+    .signin_page_container {
+        header {
+            padding: 15px 40px 0px 40px !important;
+        }
+    }     
+}
+        
+    
+        

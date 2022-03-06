@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="18px" viewBox="0 0 27 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon-mysub</title>
+    <g id="Schedule-Interview---2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="dashboard" transform="translate(-30.000000, -270.000000)" fill-rule="nonzero">
+            <g id="Group-15" transform="translate(0.000000, 127.000000)">
+                <g id="Icon-mysub" transform="translate(30.000000, 143.000000)">
+                    <path d="M26.0104427,16.2 C26.0104427,17.1942 25.216533,18 24.2370034,18 L1.77343927,18 C0.793909648,18 0,17.1942 0,16.2 L0,1.8 C0,0.8058 0.793909648,0 1.77343927,0 L24.2370034,0 C25.216533,0 26.0104427,0.8058 26.0104427,1.8 L26.0104427,16.2 Z" id="Path" fill="#15C872"></path>
+                    <path d="M15.369807,14.4 L21.2812713,14.4 L21.2812713,15.6 L15.369807,15.6 L15.369807,14.4 Z M15.369807,12 L23.645857,12 L23.645857,13.2 L15.369807,13.2 L15.369807,12 Z" id="Shape" fill="#FFFFFF"></path>
+                    <polygon id="Path" fill="#FFFFFF" points="8.57162316 3 10.6412268 6.8994 14.7786606 7.5 11.8229285 10.5 12.4140749 15 8.57162316 12.9 4.7291714 15 5.32031782 10.5 2.3645857 7.5 6.50201952 6.8994"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

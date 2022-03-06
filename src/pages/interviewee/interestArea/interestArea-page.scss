@@ -1,0 +1,207 @@
+$primary-bg-color: #F7B1AB;
+$secondary-bg-color: #807182;
+$font-color: rgba(0,0,0,.8);
+$font-family: 'Montserrat',sans-serif;
+$form-border-color: rgba(0,0,0,.1);
+.site-layout-background {
+    overflow-y: scroll !important;
+    display: flex;
+    justify-content: center;
+}
+.interestArea_page_container {
+    width: 100%;
+    background-color: #fff;
+        .ant-result {
+        padding: 230px 32px !important;
+    }
+    .ant-card-meta-detail{
+        padding-top: 15px !important;
+    }
+    .ant-card{
+        border-radius: 6px !important;
+        cursor: pointer;
+        &:hover {
+            background: #f1f1f1;
+            border: 2px solid $form-border-color !important;
+        }
+    } 
+    .ant-card-bordered {
+        border: 2px solid #f0f0f0;
+    }
+    .ant-card-body {
+        padding: 12px !important
+    }
+    header {
+        position: absolute;
+        top: 50%;
+        width: 37em;
+        height: 18em;
+        margin-top: -18em;
+    }
+    span.anticon.anticon-arrow-right {
+        float: right;
+        padding: 5px;
+        padding-left: 30px;
+    }
+    span.ant-btn-loading-icon {
+        float: right;
+        padding: 0px;
+        padding-left: 30px;
+    }
+    .interestArea-container{
+       display: flex;
+    }
+     .left-container{
+        width: 60%;
+        align-items: center;
+        justify-content: center;
+        display: flex;;
+        .ant-card-meta {
+            display: flex;
+            justify-content: center;
+        }
+        .card-header {
+            display: flex;
+            justify-content: center;
+        }
+        h4{
+            padding-top: 18px;
+            color: #a9a9a9;
+            height: 30px;
+        }
+        h2{
+            font-size: 23px;
+            font-weight: 700;
+        }
+        & h1:nth-of-type(1) {
+                    color: $font-color;
+                    font-size: 23px;
+                    font-weight: 700;
+                }
+              
+              
+                    span.anticon.anticon-check-circle {
+                        font-size: 22px;
+                    position: absolute;
+                    left: 67px;
+                    top: -6px;
+                    }
+                    
+              
+                & input {
+                  border: 1px solid $form-border-color;
+                  border-radius: 4px;
+                  height: 43px;
+                  line-height: 38px;
+                  padding-left: 5px;
+                  background-color: #f6f4f4;
+                  width: 100%;
+                }
+
+                & .otp-header{
+
+                    &input{
+                        width: 45px !important;
+                    }
+                }
+              
+                & input, label {
+                    color: $font-color;
+                }
+                & label{
+                    display: block;
+                    margin-bottom: 5px;
+                    font-weight: 600;
+                }
+              
+             
+   
+                footer {
+                    padding-top: 20px;
+                    button.ant-btn.ant-btn-primary.ant-btn-lg {
+                        float: right;
+                    }
+                    .login-footer {
+                        padding-top: 35px;
+                    }                   
+            
+            
+                & h4{
+                    padding-top: 5px;
+                    cursor: pointer;
+                    }
+                & img{
+                    width: 45px;
+                }                   
+        }
+        }
+        .right-container {
+            width: 40%;
+            background: #ff634d;
+            height: 100vh;
+            img{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;              
+                width: 65%;
+                height: 65%;
+            }
+            h1 {
+            color: #fff;
+            text-align: center;
+            font-size: 21px;
+            padding: 80px 80px 20px 80px;           
+        }
+        }
+}
+
+
+
+@media (max-width: 767px) {
+    .ant-col-push-14 {
+        left: 30% !important;           
+    }
+     .interestArea_page_container {
+         i{
+             display: none;
+         }
+        width: 1000px;
+        .interestArea-container{
+            background-color: #fff;
+        }
+         .left-container{
+
+                  
+                    & .set {
+                        margin: 0 !important;
+                    }
+                    
+                        footer {
+                            padding-left:0px !important;
+                    
+                        & button {                           
+                            margin: 20px !important;
+                        }
+    
+                               
+                }
+            }
+               
+    }
+    
+}
+
+@media (min-width: 1100px) and (max-width: 1500px) {
+    .interestArea_page_container {
+        footer {
+            padding-top: 5px;
+        }
+        .set {
+            margin: 10px 0 !important;
+        }
+    }     
+}
+  
+
+  
+  
