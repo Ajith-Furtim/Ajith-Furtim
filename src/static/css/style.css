@@ -58,7 +58,18 @@ aside.ant-layout-sider.ant-layout-sider-light {
  /* .ant-menu-item:active, .ant-menu-submenu-title:active {
   background: #515566 !important;
 } */
+/* aside.ant-layout-sider.ant-layout-sider-light {
+  max-width: 250px !important;
+  min-width: 250px !important;
+  width: 250px !important;
+} */
+.fVhsrM .atbd-main-layout {
+  margin-left: 240px !important;
+}
 
+.fVhsrM .ant-layout-sider.ant-layout-sider-collapsed + .atbd-main-layout {
+  margin-left: 80px !important;
+}
 
 
 input {

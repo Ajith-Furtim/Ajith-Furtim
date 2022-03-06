@@ -49,7 +49,7 @@ const Grid = () => {
       ) : products.length ? (
         products.map(({ id, name, rate, price, oldPrice, popular, img }) => {
           return (
-            <Col xxl={6} lg={12} xs={24} key={id}>
+            <Col xxl={6} lg={6} xs={24} key={id}>
               <ProductCards product={{ id, name, rate, price, oldPrice, popular, img }} />
             </Col>
           );
@@ -61,7 +61,7 @@ const Grid = () => {
           </NotFoundWrapper>
         </Col>
       )}
-      <Col xs={24} className="pb-30">
+      {/* <Col xs={24} className="pb-30">
         <PaginationWrapper style={{ marginTop: 10 }}>
           {products.length ? (
             <Pagination
@@ -74,7 +74,7 @@ const Grid = () => {
             />
           ) : null}
         </PaginationWrapper>
-      </Col>
+      </Col> */}
     </Row>
   );
 };

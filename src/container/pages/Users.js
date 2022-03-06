@@ -57,38 +57,7 @@ const Users = () => {
         <UserCarrdTop>
           <PageHeader
             ghost
-            title="Users Card"
-            subTitle={
-              <>
-                <span className="title-counter">274 Users </span>
-                <AutoComplete
-                  onSearch={handleSearch}
-                  dataSource={notData}
-                  placeholder="Search by Name"
-                  width="100%"
-                  patterns
-                />
-              </>
-            }
-            buttons={[
-              <Button className="btn-add_new" size="default" type="primary" key="1">
-                <Link to="/admin/pages/add-user/info">
-                  <FeatherIcon icon="plus" size={14} /> Add New User
-                </Link>
-              </Button>,
-              <NavLink className="action-btn" key="2" to={`${path}/grid`}>
-                <FeatherIcon icon="grid" size={14} />
-              </NavLink>,
-              <NavLink className="action-btn" key="3" to={`${path}/list`}>
-                <FeatherIcon icon="list" size={14} />
-              </NavLink>,
-              <NavLink className="action-btn" key="4" to={`${path}/grid-style`}>
-                <FeatherIcon icon="maximize" size={14} />
-              </NavLink>,
-              <NavLink className="action-btn" key="5" to={`${path}/grid-group`}>
-                <FeatherIcon icon="users" size={14} />
-              </NavLink>,
-            ]}
+            title="Schedule your discussions with skilled consultants"
           />
         </UserCarrdTop>
       </CardToolbox>
@@ -97,57 +66,13 @@ const Users = () => {
           <Row gutter={25}>
             <Switch>
               <Route
-                path={`${path}/grid`}
-                component={() => {
-                  return users.map(user => {
-                    const { id } = user;
-
-                    return (
-                      <Col key={id} xxl={6} xl={8} sm={12} xs={24}>
-                        <Suspense
-                          fallback={
-                            <Cards headless>
-                              <Skeleton avatar active />
-                            </Cards>
-                          }
-                        >
-                          <User user={user} />
-                        </Suspense>
-                      </Col>
-                    );
-                  });
-                }}
-              />
-              <Route
-                path={`${path}/list`}
-                component={() => {
-                  return users.map(user => {
-                    const { id } = user;
-
-                    return (
-                      <Col key={id} xxl={12} xl={12} sm={24} xs={24}>
-                        <Suspense
-                          fallback={
-                            <Cards headless>
-                              <Skeleton avatar active />
-                            </Cards>
-                          }
-                        >
-                          <UserCardList user={user} />
-                        </Suspense>
-                      </Col>
-                    );
-                  });
-                }}
-              />
-              <Route
-                path={`${path}/grid-group`}
+                path={path}
                 component={() => {
                   return userGroup.map(user => {
                     const { id } = user;
 
                     return (
-                      <Col key={id} xxl={8} md={12} sm={24} xs={24}>
+                      <Col key={id} xxl={8} md={8} sm={24} xs={24}>
                         <Suspense
                           fallback={
                             <Cards headless>
@@ -162,31 +87,10 @@ const Users = () => {
                   });
                 }}
               />
-              <Route
-                path={`${path}/grid-style`}
-                component={() => {
-                  return users.map(user => {
-                    const { id } = user;
 
-                    return (
-                      <Col key={id} xxl={6} xl={8} sm={12} xs={24}>
-                        <Suspense
-                          fallback={
-                            <Cards headless>
-                              <Skeleton avatar active />
-                            </Cards>
-                          }
-                        >
-                          <UserCardStyle user={user} />
-                        </Suspense>
-                      </Col>
-                    );
-                  });
-                }}
-              />
             </Switch>
 
-            <Col xs={24}>
+            {/* <Col xs={24}>
               <div className="user-card-pagination">
                 <Pagination
                   onChange={onChange}
@@ -196,7 +100,7 @@ const Users = () => {
                   total={500}
                 />
               </div>
-            </Col>
+            </Col> */}
           </Row>
         </UsercardWrapper>
       </Main>

@@ -240,6 +240,13 @@ const UserTableStyleWrapper = Styled.nav`
 
 const UserCard = Styled.div`
   text-align: center;
+  ul.ant-rate.ant-rate-disabled {
+    margin-top: -26px;
+}
+.sch-btn {
+  float: right;
+  margin-bottom: 20px;
+}
   .user-card{
     &.theme-list{
       .ant-card-body{

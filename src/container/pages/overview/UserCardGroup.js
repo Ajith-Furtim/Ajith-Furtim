@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { Progress } from 'antd';
+import { Progress ,Button,Rate} from 'antd';
 import FeatherIcon from 'feather-icons-react';
 import { UserCard } from '../style';
 import Heading from '../../../components/heading/heading';
@@ -25,7 +25,7 @@ const UserCardGroup = ({ user }) => {
                 </Link>
                 <p className="card__designation">{company}</p>
               </Heading>
-              <Dropdown
+              {/* <Dropdown
                 content={
                   <>
                     <Link to="#">View</Link>
@@ -38,41 +38,28 @@ const UserCardGroup = ({ user }) => {
                 <Link className="action-more" to="#">
                   <FeatherIcon icon="more-horizontal" />
                 </Link>
-              </Dropdown>
+              </Dropdown> */}
             </div>
           </div>
           <div className="card__content">
             <p>{content}</p>
-            <div className="image-group">
-              {img.map((item, key) => {
-                return <img key={key + 1} src={require(`../../../${item}`)} alt="" />;
-              })}
-            </div>
           </div>
           <div className="card__info">
             <p className="info-line">
-              <span>Current project</span>
-              <span>Project Completed</span>
+              <span>Rating</span>
+              <span>Experience</span>
             </p>
             <h2 className="info-line">
-              <span>Plugin Development</span>
+              <span> <Rate allowHalf defaultValue={5} disabled /></span>
               <span className="success" style={{ background: 'none !important' }}>
-                45
+                10
               </span>
             </h2>
-            <div className="project-progress">
-              <Progress
-                percent={70}
-                strokeWidth={5}
-                status="active"
-                showInfo={false}
-                className="progress-dt progress-primary"
-              />
-              <div className="progress-percentage">
-                <span>70%</span>
-              </div>
-            </div>
-            <p className="completed-count">12 / 15 tasks completed</p>
+          <div className="sch-btn">
+            <Button size="large" type="primary">
+            SCHEDULE   
+            </Button>
+          </div>
           </div>
         </Cards>
       </div>

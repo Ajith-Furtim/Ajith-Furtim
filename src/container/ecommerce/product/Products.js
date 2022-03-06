@@ -46,34 +46,12 @@ const Product = () => {
     <>
       <PageHeader
         ghost
-        title="Shop"
-        buttons={[
-          <div key="1" className="page-header-actions">
-            <CalendarButtonPageHeader key="1" />
-            <ExportButtonPageHeader key="2" />
-            <ShareButtonPageHeader key="3" />
-            <Button size="small" key="4" type="primary">
-              <FeatherIcon icon="plus" size={14} />
-              Add New
-            </Button>
-          </div>,
-        ]}
+        title="INTERVIEWS"
       />
       <Main>
         <Row gutter={30}>
-          <Col className="product-sidebar-col" xxl={5} xl={7} lg={7} md={10} xs={24}>
-            <Suspense
-              fallback={
-                <Cards headless>
-                  <Skeleton paragraph={{ rows: 22 }} active />
-                </Cards>
-              }
-            >
-              <Filters />
-            </Suspense>
-          </Col>
-          <Col className="product-content-col" xxl={19} lg={17} md={14} xs={24}>
-            <TopToolBox>
+          <Col className="product-content-col" xxl={19} lg={24} md={14} xs={24}>
+            {/* <TopToolBox>
               <Row gutter={0}>
                 <Col xxl={7} lg={12} xs={24}>
                   <AutoComplete
@@ -112,7 +90,8 @@ const Product = () => {
                   </div>
                 </Col>
               </Row>
-            </TopToolBox>
+            </TopToolBox> */}
+            <h1>Schedule Interviews</h1>
 
             <Switch>
               <Suspense
@@ -123,8 +102,19 @@ const Product = () => {
                 }
               >
                 <Route exact path={path} component={Grid} />
-                <Route exact path={`${path}/grid`} component={Grid} />
-                <Route exact path={`${path}/list`} component={List} />
+              </Suspense>
+            </Switch>
+            <h1>Completed Interviews</h1>
+
+            <Switch>
+              <Suspense
+                fallback={
+                  <div className="spin d-flex align-center-v">
+                    <Spin />
+                  </div>
+                }
+              >
+                <Route exact path={path} component={Grid} />
               </Suspense>
             </Switch>
           </Col>
