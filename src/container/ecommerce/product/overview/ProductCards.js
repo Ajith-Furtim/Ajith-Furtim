@@ -34,10 +34,8 @@ const ProductCards = ({ product }) => {
         <p className="product-single-price">
           <span className="product-single-price__new">INFO </span>
         </p>
-        <div className='d-flex '>
-        <h4>Skill</h4>
-        <h4>26 Feb 04:00</h4>
-        </div>
+        <h4>Skill/Level</h4>
+        <h4 className='justify-content-end  d-flex '>26 Feb 04:00</h4>
 
       </figcaption>
     </ProductCard>

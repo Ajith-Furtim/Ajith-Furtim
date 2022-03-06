@@ -2,6 +2,7 @@ import Styled from 'styled-components';
 
 const Div = Styled.div`
     position: relative;
+   
     header{
         box-shadow: 0 2px 30px ${({ theme }) => theme['gray-solid']}10;
         ${({ darkMode }) => (darkMode ? `background: #272B41;` : '')};

@@ -63,11 +63,12 @@ aside.ant-layout-sider.ant-layout-sider-light {
   min-width: 250px !important;
   width: 250px !important;
 } */
-.fVhsrM .atbd-main-layout {
+ .atbd-main-layout {
   margin-left: 240px !important;
+  margin-top: 0 !important;
 }
 
-.fVhsrM .ant-layout-sider.ant-layout-sider-collapsed + .atbd-main-layout {
+.ant-layout-sider.ant-layout-sider-collapsed + .atbd-main-layout {
   margin-left: 80px !important;
 }
 
@@ -98,6 +99,10 @@ img.head-menu {
   display: flex;
 }
 
+/* section.ant-layout.layout {
+  font-size: 14px;
+} */
+
 /* MY_CSS_END */
 
 .d-flex {
@@ -119,6 +124,10 @@ img.head-menu {
 
 .justify-content-center {
   justify-content: center;
+}
+
+.justify-content-end {
+  justify-content: end;
 }
 
 .align-items-center {

@@ -287,9 +287,9 @@ const ThemeLayout = WrappedComponent => {
                       renderTrackVertical={renderTrackVertical}
                     >
                       <div  className='sidenav-head'> 
-                      {collapsed? <Button type="link" onClick={toggleCollapsed}>
+                      {collapsed? <Button className='sidenav-btn' type="link" onClick={toggleCollapsed}>
                       <img   className='head-menu' src={require(`../static/img/icon/${collapsed ? 'right.svg' : 'left.svg'}`)} alt="menu" />
-                    </Button>:<Button type="link" onClick={toggleCollapsed}>
+                    </Button>:<Button className='sidenav-btn' type="link" onClick={toggleCollapsed}>
                       <img  src={require(`../static/img/icon/${collapsed ? 'right.svg' : 'left.svg'}`)} alt="menu" />
                     </Button>}
 

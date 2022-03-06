@@ -26,8 +26,8 @@ const AuthorBox = () => {
           </figure>
           <figcaption>
             <div className="info">
-              <Heading as="h4">Duran Clayton</Heading>
-              <p>UI/UX Designer</p>
+              <Heading as="h4">Interviewer G</Heading>
+              <p>Designer</p>
             </div>
           </figcaption>
         </div>

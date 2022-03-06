@@ -18,6 +18,7 @@ const Profile = lazy(() => import('../../pages/interviewee/profile/profile-page'
 const Settings = lazy(() => import('../../container/profile/settings/Settings'));
 const Product = lazy(() => import('../../container/ecommerce/product/Products'));
 const Users = lazy(() => import('../../container/pages/Users'));
+const Logout = lazy(() => import('../../pages/logout/logout'));
 
 
 
@@ -51,7 +52,9 @@ const Interviewee = () => {
 			<Route path={`${path}/cancelinterview`} component={CancelInterview} />
 			<Route path={`${path}/confirmedinterview`} component={ConfirmedInterview} />
 			<Route path={`${path}/interviewerprofile`} component={InterviewProfile} />
-      <Route path={`${path}/Profile`} component={Settings} />
+      <Route path={`${path}/profile`} component={Settings} />
+      <Route path={`${path}/logout`} component={Logout} />
+
       </Suspense>
     </Switch>
   );
