@@ -6,14 +6,12 @@ import IntervieweeInterviews from './interviews';
 
    
 
-// const Interviews = lazy(() => import('../../pages/interviewee/interviews/interviews-page'));
-const ScheduledInterview = lazy(() => import('../../pages/interviewee/scheduledInterview/scheduledInterview-page'));
-// const Schedule = lazy(() => import('../../pages/interviewee/schedule/schedule-page'));
-const ReScheduledInterview = lazy(() => import('../../pages/interviewee/rescheduleInterview/rescheduleInterview-page'));
-const CancelInterview = lazy(() => import('../../pages/interviewee/cancelInterview/cancelInterview-page'));
-const ConfirmedInterview = lazy(() => import('../../pages/interviewee/confirmedInterview/confirmedInterview-page'));
-const InterviewProfile = lazy(() => import('../../pages/interviewee/interviewProfile/interviewProfile-page'));
-// const Profile = lazy(() => import('../../pages/interviewee/profile/profile-page'));
+// const ScheduledInterview = lazy(() => import('../../pages/interviewee/scheduledInterview/scheduledInterview-page'));
+// const ReScheduledInterview = lazy(() => import('../../pages/interviewee/rescheduleInterview/rescheduleInterview-page'));
+// const CancelInterview = lazy(() => import('../../pages/interviewee/cancelInterview/cancelInterview-page'));
+// const ConfirmedInterview = lazy(() => import('../../pages/interviewee/confirmedInterview/confirmedInterview-page'));
+// const InterviewProfile = lazy(() => import('../../pages/interviewee/interviewProfile/interviewProfile-page'));
+// // const Profile = lazy(() => import('../../pages/interviewee/profile/profile-page'));
 
 const Settings = lazy(() => import('../../container/profile/settings/Settings'));
 const Logout = lazy(() => import('../../pages/logout/logout'));
@@ -21,7 +19,11 @@ const Logout = lazy(() => import('../../pages/logout/logout'));
 const Interviews = lazy(() => import('../../new-pages/interviewee/interviews/interviews'));
 const Schedule = lazy(() => import('../../new-pages/interviewee/schedule/schedules'));
 const Profile = lazy(() => import('../../new-pages/interviewee/profile/Settings'));
-
+const ScheduledInterview = lazy(() => import('../../new-pages/interviewee/scheduledInterview/scheduledInterview-page'));
+const ReScheduledInterview = lazy(() => import('../../new-pages/interviewee/rescheduleInterview/rescheduleInterview-page'));
+const CancelInterview = lazy(() => import('../../new-pages/interviewee/cancelInterview/cancelInterview-page'));
+const ConfirmedInterview = lazy(() => import('../../new-pages/interviewee/confirmedInterview/confirmedInterview-page'));
+const InterviewProfile = lazy(() => import('../../pages/interviewee/interviewProfile/interviewProfile-page'));
 
 const Interviewee = () => {
   const { path } = useRouteMatch();

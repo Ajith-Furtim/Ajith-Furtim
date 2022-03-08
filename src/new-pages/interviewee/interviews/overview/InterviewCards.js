@@ -9,9 +9,11 @@ import { Button } from '../../../../components/buttons/buttons';
 import { ProductCard } from '../Style';
 import { updateWishList } from '../../../../redux/product/actionCreator';
 import fullstack from '../../../../../src/assets/imges/c-full-stack.svg';
+import { Cards } from '../../../../components/cards/frame/cards-frame';
 
 const ProductCards = ({ product }) => {
-  const { id, name, rate, price, oldPrice, popular, img } = product;
+  const { id, companyname, firstname, lastname, date,time,joiurl,status,level } = product;
+  console.log(product)
   const dispatch = useDispatch();
 
   return (
@@ -32,10 +34,10 @@ const ProductCards = ({ product }) => {
           <Link to={`/admin/ecommerce/productDetails/${id}`}>INFO</Link>
         </Heading> */}
         <p className="product-single-price">
-          <span className="product-single-price__new">INFO </span>
+          <span className="product-single-price__new">{companyname} </span>
         </p>
-        <h4>Skill/Level</h4>
-        <h4 className='justify-content-end  d-flex '>26 Feb 04:00</h4>
+        <h4 className='interview-skill'>{level}</h4>
+        <h4 className='justify-content-end  d-flex '>{date} {time}</h4>
 
       </figcaption>
     </ProductCard>

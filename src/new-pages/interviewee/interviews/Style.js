@@ -249,6 +249,10 @@ const ProductCard = Styled.div`
     .product-single-price__new{
         font-weight: 600;
         color: ${({ theme }) => theme['primary-color']};
+        text-transform: uppercase;
+    }
+    .interview-skill{
+        text-transform: capitalize;
     }
     .product-single-price__offer{
         font-weight: 500;

@@ -1,0 +1,205 @@
+.interviewProfile_page_container{
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden !important;
+    .card-box{
+        width: 250px;
+        height: 300px;
+    }
+    .ant-card-meta-detail {
+        height: 130px;
+    }
+
+    .sloat-select {
+        cursor: pointer;
+        padding: 10px;
+        margin: 15px;
+        margin-left: 20PX;
+        background-color: #f5f5f5 !important;
+        position: relative;
+        top: 20px;
+        border-left: 3px solid orange;
+        h4{
+            color: #bfb1b1;
+        }
+    }
+   
+    .right-container{   
+        .site-badge-count-109{
+            font-size: 15px;
+            font-weight: 700;
+        }    
+        button {
+            border: 1px solid rgba(0,0,0,.2);
+            height: 45px;
+            width: 160px;
+            border-radius: 50px;
+            width: 225px;
+            // margin: 45px -45px;
+            margin-top: 45px;
+            text-transform: uppercase;
+        }     
+        & #similar {
+            i{
+                padding-left: 20px;
+            }
+            border: 1px solid transparent;
+            color: #fff;
+            background-color: #353a8b  !important;        
+      }
+      #booknow {
+        i{
+            padding-left: 50px;
+            position: relative;
+            left: 15px;
+        }
+        border: 1px solid transparent;
+        color: #fff;
+        background-color:#15bf49  !important;
+        margin-top: 25px !important;       
+        }
+      .available-conatiner{
+        background-color: #f1eded;
+        padding-bottom: 27px;
+        margin-top: 25px;
+        h3{
+            height: 18px;
+        }
+        h4.sloats{
+            height: 5px;
+            padding-left: 20px;
+            padding-top: 10px;
+        }
+        sup.ant-scroll-number.ant-badge-count {
+            margin-top: -2px;
+            font-weight: 700;
+            margin-left: 6px;
+            background-color: #fff;
+            color: #121212;
+        }
+        .available-head {
+            cursor: pointer;
+            padding: 10px;
+            margin: 15px;
+            margin-left: 20PX;
+            background-color: #fff;
+            position: relative;
+            top: 20px;
+            border-left: 3px solid orange;
+            h4{
+                color: #bfb1b1;
+            }
+        
+        }
+      }
+    }
+    .interviewProfile-head{
+    .ant-avatar {
+        width: 140px;
+        height: 140px;
+    }
+    .user-details{
+        margin-top: 35px;
+        margin-left: 15px;
+        .ant-rate{
+         font-size: 35px;
+        }
+        h2{
+            height: 15px;
+        }
+    }
+    }
+    .userinfo-head {
+        margin-top: 20px;
+    }
+    .userskill-head {
+        margin-top: 20px;
+        background-color: #f1eded;
+        border-radius: 6px;
+        border-left: 5px solid orange;
+        h4{
+            font-size: 13px;
+            color: #bfb1b1;
+            height: 12px;
+        }
+        h3 {
+            font-size: 14px;
+        }
+        .userskill-details{
+            padding: 8px;
+        }
+    }
+
+    .relateduser-title{
+        margin-top: 40px;
+        h4{
+            color: #3939fd;
+            font-size: 15px;
+            height: 10px;
+        }
+        h2{
+            color: #28287c;
+            font-weight: bold;
+            font-size: 25px;
+        }
+    }
+
+    .relateduser-head{
+        margin-top: 10px;
+        .card-rate{
+            text-align: center;
+            margin-bottom: 25px;
+            .ant-rate{
+                font-size: 27px;
+            }
+        }
+        .ant-card-body {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+            // box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+        .ant-card-meta-description {
+            text-align: center;
+        }
+        .card-footer{
+            margin-top: 15px;
+            h4{
+                height: 14px;
+            }
+            h5{
+                color: #c7a6a6;
+            }
+            .ant-avatar{
+                width: 45px;
+                height: 45px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+    .interviewProfile_page_container {
+       .userskill-details{
+           .ant-col-push-1{
+               left: 0% !important
+           }
+       }
+     .card-box {
+        margin-bottom: 30px;
+        margin-left: 30px;
+    }
+    .ant-col-push-1.right-container{        
+            left: 0% !important
+    }
+    .right-container button{
+        margin-left: 35px;
+        margin-top: 0 !important;
+    }
+    .interviewProfile-head
+    { .user-details{
+        margin-top: 20px;
+        margin-left: 8px;
+    }
+    } 
+}
+}

@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
-
-
 import './scheduledInterview-page.scss';
 import 'antd/dist/antd.css';
 import { Row, Col, Button, Input, Space, Card, Select, Rate, Avatar, Image, Steps, Modal } from 'antd';
@@ -18,6 +16,7 @@ import moment from 'moment';
 const ScheduledInterview = () => {
     let data = useLocation();
     const history = useHistory();
+    const jwt = localStorage.getItem('jwt');
 
     let interviewrData = data.state.data;
     const { confirm } = Modal;
@@ -31,6 +30,7 @@ const ScheduledInterview = () => {
     const [paymetStatus, setPaymetStatus] = useState("");
     const [joinNowTrue, setJoinNowTrue] = useState(false);
     const [todayDate, setTodayDate] = useState(moment(new Date()).format("YYYY-MM-DD"));
+    const [assigendStatus, setassigendStatus] = useState(3);
 
 
     useEffect(() => {
@@ -38,46 +38,36 @@ const ScheduledInterview = () => {
         var date2 = new Date(interviewrData.date);
         console.log(date1)
         console.log(date2)
-
         if (date1.getTime() === date2.getTime()) {
-            var todayTime = moment(new Date()).format("H:mm:ss");
+            setJoinNowTrue(true);
+            // var todayTime = moment(new Date()).format("H:mm:ss");
+            // var str1 = todayTime;
+            // var str2 = interviewrData.time;
 
-            var str1 = todayTime;
-            var str2 = interviewrData.time;
-
-            if (str1 > str2) {
-                setJoinNowTrue(true)
-            }
-
+            // if (str1 > str2) {
+            //     setJoinNowTrue(true)
+            // }
         }
-
-
-        // var firstDate = new Date();
-        // firstDate.setFullYear(firstValue[0], (firstValue[1] - 1), firstValue[2]);
-
-        // var secondDate = new Date();
-        // secondDate.setFullYear(secondValue[0], (secondValue[1] - 1), secondValue[2]);
-
-        // if (firstDate == secondDate) {
-        //     alert("true");
-        // }
-        // else {
-        //     alert("Second Date  is greater than First Date");
-        // }
-
-
-
-        // getSimilarList();
+        // getAllStatus();
+        if (interviewrData.status == "INTERVIEWER ASSIGNED") {
+            setassigendStatus(1);
+        } else if (interviewrData.status == "PAYMENT COMPLETED") {
+            setassigendStatus(2);
+        } else if (interviewrData.status == "SYSTEM CHECK") {
+            setassigendStatus(3);
+        } else if (interviewrData.status == "PREP TEST") {
+            setassigendStatus(4);
+        } else if (interviewrData.status == "BEGIN INTERVIEW") {
+            setassigendStatus(5);
+        }
     }, []);
 
 
-    const getSimilarList = () => {
-        apiService(`myinterview/view`, 'post', '', false, '',
+    const getAllStatus = () => {
+        apiService(`users/statuslist`, 'get', '', false, jwt,
             result => {
                 if (result.data) {
                     console.log(result.data)
-                    setPaymetStatus(result.data.status)
-                    setSimilarList([...result.data.similar]);
                 }
             },
             (error) => {
@@ -145,7 +135,7 @@ const ScheduledInterview = () => {
                         </Col>
                         <Col xs={24} sm={24} md={13} lg={13} xl={13} push={1}>
                             <div className='stpes-completed-large'>
-                                <Steps size="small" current="1">
+                                <Steps size="small" current={assigendStatus}>
                                     <Step description="INTERVIEWER ASSIGNED" />
                                     <Step description="PAYMENT COMPLETED" />
                                     <Step description="SYSTEM CHECK" />
@@ -161,7 +151,7 @@ const ScheduledInterview = () => {
                             </Steps> */}
                             </div>
                             <div className='stpes-completed-small'>
-                                <Steps size="small" direction="vertical" current="1">
+                                <Steps size="small" direction="vertical" current={assigendStatus}>
                                     <Step description="INTERVIEWER ASSIGNED" />
                                     <Step description="PAYMENT COMPLETED" />
                                     <Step description="SYSTEM CHECK" />

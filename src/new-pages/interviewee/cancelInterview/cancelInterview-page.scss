@@ -1,0 +1,259 @@
+$primary-bg-color: #F7B1AB;
+$secondary-bg-color: #807182;
+$font-color: rgba(202, 202, 202, 0.8);
+$form-border-color:#4a4848;
+.cancelInterview_page_container {
+    width: 100%;
+    background-color: #fff;
+    .ant-card-bordered {
+        border: 2px solid #f0f0f0;
+    }
+    .react-player{
+       width: 370px !important;
+       height: 230px !important;
+    }
+    .video-card{
+        width: 525px; height: 350px; margin-top: 16px;
+    }
+    
+    .scheduledInterview-container{
+      .reschedule-bottom{
+          margin-top: 25px;
+        label {
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .cancel-btn{
+            border: 1px solid transparent;
+            color: #fff;
+            background-color: #a77b7b !important;
+        }
+        #cancel {
+            i{
+                padding-left: 50px;
+            }
+ 
+        }
+        textarea.ant-input {
+            border: 1px solid #4a4848 !important;
+            border-radius: 10px !important;
+            min-height: 85px !important;
+            margin-top: 6px !important;
+            padding-left: 20px !important;
+            // background-color: #f6f4f4 !important;
+        }
+      }
+
+
+
+
+        .ant-select-selector{
+            border: 1px solid $form-border-color !important;
+            border-radius: 10px!important;
+              height: 50px!important;
+              line-height: 38px!important;
+              padding-left:20px!important;
+            // background-color: #f6f4f4!important;
+            width: 100%!important;
+        }
+        span.ant-select-selection-item {
+           margin-top: 9px !important;
+        }
+        .ant-select-selection-placeholder {
+            margin-top: 9px !important;
+        }
+    
+        .ant-select-selection-search-input {
+            height: 50px !important;
+        }
+    
+        .ant-picker {
+            border: 1px solid $form-border-color !important;
+            border-radius: 10px!important;
+              height: 50px!important;
+              line-height: 38px!important;
+              padding-left:20px!important;
+            // background-color: #f6f4f4!important;
+            width: 100%!important;
+            margin-top: 6px !important;
+        }
+        .card-input{
+            & input  {
+                border: 1px solid $form-border-color;
+                border-radius: 10px;
+                  height: 50px;
+                  line-height: 38px;
+                  padding-left:20px;
+                // background-color: #f6f4f4;
+                width: 100%;
+              }
+              
+    
+        }
+        .reschedule-btn{
+         padding-top: 33px;
+         padding-left: 21px;
+            .btn-div{
+                margin-left: 22px
+            }
+            button {
+                // border: 1px solid rgba(0,0,0,.2);
+                height: 35px;
+                line-height: 25px;
+                width: 160px;
+                border-radius: 5px;
+                background-color: #ff634d  !important;
+                text-transform: uppercase;
+                border: 1px solid transparent;
+                color: #fff;
+            }     
+            #resend {
+                i{
+                    padding-left: 20px;
+                }
+                border: 1px solid transparent;
+                color: #fff;
+                background-color: #74c374 !important;
+            }
+        }
+        .ant-select {
+            padding-top: 6px !important;
+        }
+     .scheduledInterview-status{
+         padding-top: 35px;
+        img{
+            width: 150px;
+            border-radius: 10px;
+            
+        }
+
+        .ant-steps-item-finish .ant-steps-item-icon {
+            background-color: #fff;
+            background-color: #74c374 !important;
+            border-color: #74c374 !important;
+        }
+        .anticon {
+            color: #fff;
+        }
+        .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
+            background-color: #74c374 !important;
+            height: 2px;
+        }
+        .ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
+            height: 2px;
+        }
+        .ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
+            height: 2px;
+        }
+
+
+
+
+        .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-tail::after {
+            background-color: #74c374 !important;
+        }
+        .ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon .ant-steps-icon-dot {
+            background:#74c374 !important;
+        }
+        .ant-steps-item-process .ant-steps-item-icon > .ant-steps-icon .ant-steps-icon-dot {
+            background:#74c374 !important;
+        }
+        .ant-steps-item-description {
+            font-size: 12px;
+            font-weight: 600;
+            color: #363232 !important;
+            margin-top: 35px;
+                margin-left: -31px;
+                width: 75px;
+        }
+        .assigned-details{
+            padding: 4px;
+            padding-left: 30px;
+            h4{
+                color:#74c374 !important;  
+                text-transform: uppercase;
+            }
+            h3{
+                line-height: 18px;
+                font-size: 13px;
+                font-weight: bold;
+            }
+        }
+        .btn-div{
+            margin-left: 22px
+        }
+        button {
+            border: 1px solid rgba(0,0,0,.2);
+            height: 35px;
+            line-height: 25px;
+            width: 160px;
+            border-radius: 5px;
+            background-color: #ff634d  !important;
+            text-transform: uppercase;
+        }           
+        .stpes-completed-large{
+            padding-top: 15px;
+            padding-left: 20px;
+        }
+        .stpes-completed-small{
+            display: none;
+        }
+       
+
+        }
+     
+    
+    }
+
+}
+
+
+
+@media (min-width: 400px) and (max-width: 767px) {
+    .cancelInterview_page_container {
+    .ant-col-push-1 {
+        left: 0 !important;
+        margin-top: 20px;
+    }
+    .ant-steps-item-description {
+        margin-top: 0 !important;
+            margin-left: 0 !important;
+            width: 0 !important;
+    }
+    .stpes-completed-large{
+      display: none;
+    }
+    .stpes-completed-small{
+        padding-top: 25px;
+        padding-left: 65px;
+       display: block !important;
+    }
+    .ant-steps-item-container {
+        height: 75px;
+    }
+    #cancel {
+        margin-top: 0px !important;
+    }
+    .btn-div{
+        margin-left: 0px !important;
+        display: flex;
+        justify-content: center;
+    }
+    button {
+        width: 125px !important;
+    } 
+        i{
+            display: none;
+        }
+        .reschedule-btn{
+            padding-top: 0 !important;
+        }
+    
+}    
+}
+
+
+  
+
+  
+  

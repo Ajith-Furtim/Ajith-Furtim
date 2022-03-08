@@ -6,6 +6,7 @@ import Heading from '../../../../components/heading/heading';
 import { PaginationWrapper, NotFoundWrapper } from '../Style';
 import apiService from "../../../../utils/apiService";
 import moment from 'moment';
+import { Link } from 'react-router-dom';
 
 const Grid = () => {
   const jwt = localStorage.getItem('jwt');
@@ -34,12 +35,12 @@ const Grid = () => {
 
   useEffect(() => {
     getMyInterviewsList(skillSelectId, companySelectName,);
-    if (productsAll) {
-      setState({
-        products: productsAll,
-      });
-    }
-  }, [productsAll]);
+    // if (productsAll) {
+    //   setState({
+    //     products: productsAll,
+    //   });
+    // }
+  }, []);
 
   const onShowSizeChange = (current, pageSize) => {
     setState({ ...state, current, pageSize });
@@ -82,11 +83,11 @@ const getMyInterviewsList = (skillSelectId, companySelectName,) => {
             <Spin />
           </div>
         </Col>
-      ) : products.length ? (
-        products.map(({ id, name, rate, price, oldPrice, popular, img }) => {
+      ) : scheduledInterviewsList.length ? (
+        scheduledInterviewsList.map(({ id, companyname, firstname, lastname, date,time,joiurl,status,level }) => {
           return (
             <Col xxl={6} lg={6} xs={24} key={id}>
-              <ProductCards product={{ id, name, rate, price, oldPrice, popular, img }} />
+              <ProductCards product={{ id, companyname, firstname, lastname, date, time, joiurl,status,level }} />
             </Col>
           );
         })
