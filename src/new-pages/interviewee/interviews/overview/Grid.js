@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Row, Col, Pagination, Spin } from 'antd';
 import { useSelector } from 'react-redux';
-import ProductCards from './ProductCards';
+import ProductCards from './InterviewCards';
 import Heading from '../../../../components/heading/heading';
-import { PaginationWrapper, NotFoundWrapper } from '../../Style';
+import { PaginationWrapper, NotFoundWrapper } from '../Style';
 import apiService from "../../../../utils/apiService";
 import moment from 'moment';
 

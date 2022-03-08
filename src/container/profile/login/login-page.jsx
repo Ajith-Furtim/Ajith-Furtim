@@ -5,11 +5,11 @@ import './login-page.scss';
 import 'antd/dist/antd.css';
 import { ArrowRightOutlined } from '@ant-design/icons';
 import { useDispatch, useSelector } from 'react-redux';
-// import loginImg from 'src/assets/imges/loginnew1.png';
+import loginImg from '../../../../src/assets/imges/loginnew1.png';
+import { login } from '../../../redux/authentication/actionCreator';
 
 import apiService from "../../../utils/apiService";
 import Notification from "../../../components/notification/notification";
-import { login } from '../../../redux/authentication/actionCreator';
 
 
 const Login = () => {
@@ -89,7 +89,8 @@ const Login = () => {
                     localStorage.setItem('jwt', result.data.jwt);
                     localStorage.setItem('userId', result.data.userid);
                     localStorage.setItem('name', result.data.firstname);
-
+                    dispatch(login());
+                    history.push('/interviewee/interviews');
                     // if (result.data.role == "INTERVIEWEE") {
                     //     window.location = '/interviews'
                     // } else if (result.data.role == "INTERVIEWER") {
@@ -97,8 +98,6 @@ const Login = () => {
                     // } else {
                     //     window.location = '/admin/dashboard'
                     // }
-                    dispatch(login());
-                    history.push('/interviewee');
                     setisBtnLoading(false);
                     // setOtpInput(true);
                 } else {
@@ -106,7 +105,9 @@ const Login = () => {
                     Notification.openNotificationFaliure(result.data.message)
                 }
             },
-            (error) => { });
+            (error) => {
+
+            });
     };
 
     const loginWithEmail = () => {
@@ -314,7 +315,7 @@ const Login = () => {
                     </div>
                     <div className='right-container'>
                         <h1>Measure your self with critical feedback on where yor are today</h1>
-                        {/* <img src={loginImg} /> */}
+                        <img src={loginImg} />
                     </div>
                 </div>
             }

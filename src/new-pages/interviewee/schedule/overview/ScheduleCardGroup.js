@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import { Progress ,Button,Rate} from 'antd';
 import FeatherIcon from 'feather-icons-react';
 import { UserCard } from '../style';
-import Heading from '../../../components/heading/heading';
-import { Cards } from '../../../components/cards/frame/cards-frame';
-import { Dropdown } from '../../../components/dropdown/dropdown';
-import userImg from '../../../../src/assets/imges/user.png';
+import Heading from '../../../../components/heading/heading';
+import { Cards } from '../../../../components/cards/frame/cards-frame';
+import { Dropdown } from '../../../../components/dropdown/dropdown';
+import userImg from '../../../../../src/assets/imges/user.png';
 
 const UserCardGroup = ({ user }) => {
   const { title, company, img, icon, content } = user;

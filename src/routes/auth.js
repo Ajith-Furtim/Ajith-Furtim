@@ -5,8 +5,10 @@ import AuthLayout from '../container/profile/authentication/Index';
 
 // const Login = lazy(() => import('../container/profile/authentication/overview/SignIn'));
 // const SignUp = lazy(() => import('../container/profile/authentication/overview/Signup'));
+const Login = lazy(() => import('../container/profile/login/login-page'));
+
 const ForgotPass = lazy(() => import('../container/profile/authentication/overview/ForgotPassword'));
-const Login = lazy(() => import('../pages/login/login-page'));
+// const Login = lazy(() => import('../pages/login/login-page'));
 
 const Signup = lazy(() => import('../pages/interviewee/signup/signup-page'));
 const YourSelf = lazy(() => import('../pages/interviewee/yourself/yourself-page'));

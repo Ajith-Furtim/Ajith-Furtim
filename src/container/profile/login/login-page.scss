@@ -14,11 +14,6 @@ $form-border-color: #4a4848;
 .login_page_container {
     width: 100%;
     background-color: #fff;
-    input:focus { 
-        outline: none !important;
-        border-color: #719ECE;
-        box-shadow: 0 0 10px #719ECE;
-     }
     .login-container{
         display: flex;
         .left-container{
@@ -28,37 +23,15 @@ $form-border-color: #4a4848;
             display: flex;
             .header-name {
                 display: flex;
-                .head-left {
-                    float: left;
-                    width: 83%;
-                    h1 {
-                        font-size: 24px;
-                        font-weight: 700;
-                    }
-                }   
-                .head-right {
-                    float: right;
-                    left: 17%;
-                    padding-top: 6px;
-                
-                }  
+               justify-content: space-between;
+               align-items: center;
+              
             }
             .header-name-sign {
                 display: flex;
-                .head-left {
-                    float: left;
-                    width: 49%;
-                    h1 {
-                        font-size: 24px;
-                        font-weight: 700;
-                    }
-                }   
-                .head-right {
-                    float: right;
-                    left: 17%;
-                    padding-top: 6px;
-                
-                }  
+                justify-content: space-between;
+                align-items: center;
+               
             }
          
             .login-footer{

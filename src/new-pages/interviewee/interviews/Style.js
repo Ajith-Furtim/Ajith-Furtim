@@ -1600,7 +1600,7 @@ const CheckoutWrapper = Styled.div`
             ${({ theme }) => (!theme.rtl ? 'left' : 'right')}: 100%;
             top: 20px;
             color: #333;
-            background-image: url(${require('../../static/img/progress.svg')});
+            background-image: url(${require('../../../static/img/progress.svg')});
             width: 137%;
             height: 6px;
             background-size: cover;
@@ -1690,13 +1690,13 @@ const CheckoutWrapper = Styled.div`
         &.ant-steps-item-finish{
             .ant-steps-item-container{
                 &:after{
-                    background-image: url(${require('../../static/img/progress-active.svg')});
+                    background-image: url(${require('../../../static/img/progress-active.svg')});
                 }
             }
             .ant-steps-item-title{
                 color: ${({ theme }) => theme['dark-color']} !important;
                 &:after{
-                    background-image: url(${require('../../static/img/progress-active.svg')});
+                    background-image: url(${require('../../../static/img/progress-active.svg')});
                 }
             }
             .ant-steps-item-icon{

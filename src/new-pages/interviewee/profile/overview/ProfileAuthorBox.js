@@ -40,7 +40,7 @@ const AuthorBox = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to={`${path}/account`}>
+              <NavLink to={`${path}/skill`}>
                 <FeatherIcon icon="settings" size={14} />
                 Skills Edit
               </NavLink>

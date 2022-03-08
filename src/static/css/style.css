@@ -22,15 +22,34 @@
     margin-top: 0px !important;  
   }
   h3.header-name {
-    color: #242525;
-    padding-top: 3px;
+    color: #fff;
+    padding-top: 4px;
   }
+  .ant-layout-sider-children {
+    background: #ff634d !important;
+  }
+  .ant-layout-sider {
+    background: #ff634d !important;
+}
+.ant-layout-sider .ant-layout-sider-children .ant-menu {
+  background: #ff634d !important;
+  padding-top: 30px;
+}
+.ant-layout-sider .ant-layout-sider-children .ant-menu .ant-menu-item a {
+  color: #fff !important;
+}
+button.ant-btn.ant-btn-link.sidenav-btn {
+  background: #ff634d !important;
+  border: none !important;
+}
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: #e78f82 !important;
+}
   /* .ant-layout-sider {
     background: #283c4f !important;
 }
 .fVhsrM .atbd-main-layout {
   margin-top: 0px !important;
-
 }
 .ant-layout-sider-children {
   background: #283c4f !important;
@@ -102,6 +121,13 @@ img.head-menu {
 /* section.ant-layout.layout {
   font-size: 14px;
 } */
+
+.ant-page-header-heading-title:after{
+  background: none !important;
+}
+.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+  height: 50px !important;
+}
 
 /* MY_CSS_END */
 
@@ -836,9 +862,9 @@ ul {
 
 /* form select */
 
-.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+/* .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
   height: 38px !important;
-}
+} */
 
 .ant-select-single .ant-select-selector .ant-select-selection-item,
 .ant-select-single .ant-select-selector .ant-select-selection-placeholder {
