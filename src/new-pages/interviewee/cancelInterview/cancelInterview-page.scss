@@ -18,7 +18,7 @@ $form-border-color:#4a4848;
     
     .scheduledInterview-container{
       .reschedule-bottom{
-          margin-top: 25px;
+         padding: 25px;
         label {
             font-size: 15px;
             font-weight: 500;
@@ -29,6 +29,7 @@ $form-border-color:#4a4848;
             background-color: #a77b7b !important;
         }
         #cancel {
+            cursor: pointer;
             i{
                 padding-left: 50px;
             }
@@ -120,7 +121,7 @@ $form-border-color:#4a4848;
             padding-top: 6px !important;
         }
      .scheduledInterview-status{
-         padding-top: 35px;
+         padding: 25px;
         img{
             width: 150px;
             border-radius: 10px;
@@ -168,7 +169,7 @@ $form-border-color:#4a4848;
         }
         .assigned-details{
             padding: 4px;
-            padding-left: 30px;
+            padding-left: 40px;
             h4{
                 color:#74c374 !important;  
                 text-transform: uppercase;

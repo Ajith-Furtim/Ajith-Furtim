@@ -115,7 +115,7 @@ const CancelInterview = () => {
                                     </Steps>
                                 </div>
                                 <div className='stpes-completed-small'>
-                                    <Steps size="small" direction="vertical" size="small" current={1}>
+                                    <Steps size="small" direction="vertical" current={1}>
                                         <Step description="INTERVIEWER ASSIGNED" />
                                         <Step description="PAYMENT COMPLETED" />
                                         <Step description="SYSTEM CHECK" />

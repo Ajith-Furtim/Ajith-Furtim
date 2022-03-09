@@ -6,10 +6,15 @@ import 'antd/dist/antd.css';
 import { Row, Col, Button, Input, Space, Card, Select, Rate, Avatar, Image, Steps, Modal } from 'antd';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { ArrowRightOutlined, AudioOutlined, ExclamationCircleOutlined } from '@ant-design/icons';
-
+import { Main } from '../../styled';
+import { PageHeader } from '../../../components/page-headers/page-headers';
 import fullstack from '../../../../src/assets/imges/c-full-stack.svg';
 import apiService from "../../../utils/apiService";
 import moment from 'moment';
+import FeatherIcon from 'feather-icons-react';
+
+
+
 
 
 
@@ -19,6 +24,7 @@ const ScheduledInterview = () => {
     const jwt = localStorage.getItem('jwt');
 
     let interviewrData = data.state.data;
+    console.log(interviewrData)
     const { confirm } = Modal;
 
     const { Search } = Input;
@@ -31,9 +37,10 @@ const ScheduledInterview = () => {
     const [joinNowTrue, setJoinNowTrue] = useState(false);
     const [todayDate, setTodayDate] = useState(moment(new Date()).format("YYYY-MM-DD"));
     const [assigendStatus, setassigendStatus] = useState(3);
-
+    const [title, setTitle] = useState("");
 
     useEffect(() => {
+        setTitle("SCHEDULE INTERVIEW" + "   |  " + interviewrData.companyname + "   |   " + moment(interviewrData.date).format('DD MMM') + "    |   " + interviewrData.time)
         var date1 = new Date(todayDate);
         var date2 = new Date(interviewrData.date);
         console.log(date1)
@@ -88,7 +95,7 @@ const ScheduledInterview = () => {
             icon: <ExclamationCircleOutlined />,
             // content: 'Some descriptions',
             onOk() {
-                history.push({ pathname: '/cancelinterview', state: { data: interviewrData } });
+                history.push({ pathname: '/interviewee/cancelinterview', state: { data: interviewrData } });
 
             },
             onCancel() {
@@ -103,7 +110,7 @@ const ScheduledInterview = () => {
             icon: <ExclamationCircleOutlined />,
             // content: 'Some descriptions',
             onOk() {
-                history.push({ pathname: '/rescheduledinterview', state: { data: interviewrData } });
+                history.push({ pathname: '/interviewee/rescheduledinterview', state: { data: interviewrData } });
 
             },
             onCancel() {
@@ -112,76 +119,101 @@ const ScheduledInterview = () => {
     }
 
     return (
-        <div className="scheduledInterview_page_container p_10">
-            <div className='scheduledInterview-container'>
-                <div className='scheduledInterview-title'>
-                    <Row>
-                        <Col xs={24} sm={24} md={24} lg={24} xl={24}>
-                            <h2>ScheduledInterview | {interviewrData.companyname} | {moment(interviewrData.date).format('DD MMM')} {interviewrData.time}</h2>
-                        </Col>
-                    </Row>
-                </div>
-                <div className='scheduledInterview-status'>
-                    <Row>
-                        <Col xs={24} sm={24} md={3} lg={3} xl={3}>
-                            <img alt="example" src={fullstack} />
-                        </Col>
-                        <Col xs={24} sm={24} md={2} lg={2} xl={2} push={1}>
-                            <div className="assigned-details">
-                                <h4>{interviewrData.companyname}</h4>
-                                {/* <h2>{interviewrData.level}</h2> */}
-                                <h5>Interviewer Mr.{interviewrData.firstname} {interviewrData.lastname} has been assigned</h5>
-                            </div>
-                        </Col>
-                        <Col xs={24} sm={24} md={13} lg={13} xl={13} push={1}>
-                            <div className='stpes-completed-large'>
-                                <Steps size="small" current={assigendStatus}>
-                                    <Step description="INTERVIEWER ASSIGNED" />
-                                    <Step description="PAYMENT COMPLETED" />
-                                    <Step description="SYSTEM CHECK" />
-                                    <Step description="PREP TEST" />
-                                    <Step description="BEGIN INTERVIEW" />
-                                </Steps>
-                                {/* <Steps progressDot current={3}>
+        <>
+            <PageHeader
+                ghost
+                title={title}
+                buttons={[
+                    <div key="1" className="page-header-actions">
+                        <Link to={{ pathname: "/interviewee/interviews" }}>
+                            <Button className="go-back-btn" size="large" key="4" type="primary">
+                                Go Back
+                            </Button>
+                        </Link>
+                    </div>,
+                ]}
+            />
+            <Main>
+
+                <div className="scheduledInterview_page_container p_10">
+                    <div className='scheduledInterview-container'>
+                        <div className='scheduledInterview-title'>
+                            <Row>
+                                <Col xs={24} sm={24} md={24} lg={24} xl={24}>
+                                    {/* <h2>ScheduledInterview | {interviewrData.companyname} | {moment(interviewrData.date).format('DD MMM')} {interviewrData.time}</h2> */}
+                                </Col>
+                            </Row>
+                        </div>
+                        <div className='scheduledInterview-status'>
+                            <Row>
+                                <Col xs={24} sm={24} md={3} lg={3} xl={3}>
+                                    <img alt="example" src={fullstack} />
+                                </Col>
+                                <Col xs={24} sm={24} md={2} lg={2} xl={2} push={1}>
+                                    <div className="assigned-details">
+                                        <h4>{interviewrData.companyname}</h4>
+                                        {/* <h2>{interviewrData.level}</h2> */}
+                                        <h5>Interviewer Mr.{interviewrData.firstname} {interviewrData.lastname} has been assigned</h5>
+                                    </div>
+                                </Col>
+                                <Col xs={24} sm={24} md={13} lg={13} xl={13} push={1}>
+                                    <div className='stpes-completed-large'>
+                                        <Steps size="small" current={assigendStatus}>
+                                            <Step description="INTERVIEWER ASSIGNED" />
+                                            <Step description="PAYMENT COMPLETED" />
+                                            <Step description="SYSTEM CHECK" />
+                                            <Step description="PREP TEST" />
+                                            <Step description="BEGIN INTERVIEW" />
+                                        </Steps>
+                                        {/* <Steps progressDot current={3}>
                                 <Step description="INTERVIEWER ASSIGNED" />
                                 <Step description="PAYMENT COMPLETED" />
                                 <Step description="SYSTEM CHECK" />
                                 <Step description="PREP TEST" />
                                 <Step description="BEGIN INTERVIEW" />
                             </Steps> */}
-                            </div>
-                            <div className='stpes-completed-small'>
-                                <Steps size="small" direction="vertical" current={assigendStatus}>
-                                    <Step description="INTERVIEWER ASSIGNED" />
-                                    <Step description="PAYMENT COMPLETED" />
-                                    <Step description="SYSTEM CHECK" />
-                                    <Step description="PREP TEST" />
-                                    <Step description="BEGIN INTERVIEW" />
-                                </Steps>
-                            </div>
-                        </Col>
-                        <Col xs={24} sm={24} md={3} lg={3} xl={3} push={1}>
-                            <div className='btn-div'>
-                                {joinNowTrue == false ?
-                                    <Row>
-                                        <Col xs={12} sm={12} md={24} lg={24} xl={24}>
-                                            <button id='resend' onClick={showConfirmRe}>RE SCHEDULE   <i><ArrowRightOutlined /></i></button>
-                                        </Col>
-                                        <Col xs={12} sm={12} md={24} lg={24} xl={24}>
-                                            <div ><button onClick={showConfirm} id='cancel' >cancel  <i><ArrowRightOutlined /></i></button></div>
-                                        </Col>
-                                    </Row> :
-                                    <Row>
-                                        <Col xs={12} sm={12} md={24} lg={24} xl={24}>
-                                            <button id='resend' onClick={openZoom}>Join Now   <i><ArrowRightOutlined /></i></button>
-                                        </Col>
-                                    </Row>
-                                }
-                            </div>
-                        </Col>
-                    </Row>
-                </div>
-                {/* <div className='similar-interviews'>
+                                    </div>
+                                    <div className='stpes-completed-small'>
+                                        <Steps size="small" direction="vertical" current={assigendStatus}>
+                                            <Step description="INTERVIEWER ASSIGNED" />
+                                            <Step description="PAYMENT COMPLETED" />
+                                            <Step description="SYSTEM CHECK" />
+                                            <Step description="PREP TEST" />
+                                            <Step description="BEGIN INTERVIEW" />
+                                        </Steps>
+                                    </div>
+                                </Col>
+                                <Col xs={24} sm={24} md={3} lg={3} xl={3} push={1}>
+                                    {/* {assigendStatus == "INTERVIEWER ASSIGNED" ? */}
+                                    <div className='btn-div'>
+                                        {joinNowTrue == false ?
+                                            <Row>
+                                                <Col xs={12} sm={12} md={24} lg={24} xl={24}>
+                                                    <button id='resend' onClick={showConfirmRe}>RE SCHEDULE   <i><ArrowRightOutlined /></i></button>
+                                                </Col>
+                                                <Col xs={12} sm={12} md={24} lg={24} xl={24}>
+                                                    <div ><button onClick={showConfirm} id='cancel' >cancel  <i><ArrowRightOutlined /></i></button></div>
+                                                </Col>
+                                            </Row> :
+                                            <Row>
+                                                <Col xs={12} sm={12} md={24} lg={24} xl={24}>
+                                                    <button id='resend' onClick={openZoom}>Join Now</button>
+                                                </Col>
+                                            </Row>
+                                        }
+                                    </div>
+                                    {/* :
+                                        <div className='btn-div'>
+                                            <Row>
+                                                <Col xs={12} sm={12} md={24} lg={24} xl={24}>
+                                                    <button id='resend' onClick={showConfirmRe}>PAYNOW</button>
+                                                </Col>
+                                            </Row>
+                                        </div>} */}
+                                </Col>
+                            </Row>
+                        </div>
+                        {/* <div className='similar-interviews'>
                     <Row>
                         <Col xs={24} sm={24} md={24} lg={24} xl={24}>
                             <h2>Watch Similar Interviews</h2>
@@ -221,8 +253,10 @@ const ScheduledInterview = () => {
                         })}                       
                     </Row>
                 </div> */}
-            </div>
-        </div>
+                    </div>
+                </div>
+            </Main>
+        </>
     );
 
 };

@@ -5,7 +5,8 @@ import 'antd/dist/antd.css';
 import { Row, Col, Button, Input, Space, Card, Select, Rate, Avatar, Image, Steps, DatePicker, Modal, Form, Spin } from 'antd';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { ArrowRightOutlined, AudioOutlined, ExclamationCircleOutlined } from '@ant-design/icons';
-
+import { Main } from '../../styled';
+import { PageHeader } from '../../../components/page-headers/page-headers';
 import fullstack from '../../../../src/assets/imges/c-full-stack.svg';
 import moment from 'moment';
 import apiService from "../../../utils/apiService";
@@ -89,107 +90,124 @@ const CancelInterview = () => {
 
 
     return (
-        <div className="cancelInterview_page_container p_10">
-            {isLoading == false ?
-                <div className="spinner">
-                    <Spin />
-                </div> :
-                <div className='scheduledInterview-container'>
-                    <div className='scheduledInterview-title'>
+        <>
+            <PageHeader
+                ghost
+                title="CANCEL INTERVIEW"
+                buttons={[
+                    <div key="1" className="page-header-actions">
+                        <Link to={{ pathname: "/interviewee/interviews" }}>
+                            <Button className="go-back-btn" size="large" key="4" type="primary">
+                                Go Back
+                            </Button>
+                        </Link>
+                    </div>,
+                ]}
+            />
+            <Main>
+                <div className="cancelInterview_page_container p_10">
+                    {isLoading == false ?
+                        <div className="spinner">
+                            <Spin />
+                        </div> :
+                        <div className='scheduledInterview-container'>
+                            {/* <div className='scheduledInterview-title'>
                         <Row>
                             <Col xs={24} sm={24} md={24} lg={24} xl={24}>
                                 <h2>Cancel Interview</h2>
                             </Col>
                         </Row>
-                    </div>
-                    <div className='scheduledInterview-status'>
-                        <Row>
-                            <Col xs={24} sm={24} md={3} lg={3} xl={3}>
-                                <img alt="example" src={fullstack} />
-                            </Col>
-                            <Col xs={24} sm={24} md={3} lg={3} xl={3}>
-                                <div className="assigned-details">
-                                    <h4>{interviewData.companyname}</h4>
-                                    <h3>{interviewData.companyname} | {moment(interviewData.date).format('DD MMM')} {interviewData.time}</h3>
-                                    <h5>Interviewer Mr.{interviewData.name} has been assigned</h5>
-                                </div>
-                            </Col>
-                            <Col xs={24} sm={24} md={14} lg={14} xl={14}>
-                                <div className='stpes-completed-large'>
-                                    <Steps size="small" current={assigendStatus}>
-                                        <Step description="INTERVIEWER ASSIGNED" />
-                                        <Step description="PAYMENT COMPLETED" />
-                                        <Step description="SYSTEM CHECK" />
-                                        <Step description="PREP TEST" />
-                                        <Step description="BEGIN INTERVIEW" />
-                                    </Steps>z
-                                </div>
-                                <div className='stpes-completed-small'>
-                                    <Steps size="small" direction="vertical" current={assigendStatus}>
-                                        <Step description="INTERVIEWER ASSIGNED" />
-                                        <Step description="PAYMENT COMPLETED" />
-                                        <Step description="SYSTEM CHECK" />
-                                        <Step description="PREP TEST" />
-                                        <Step description="BEGIN INTERVIEW" />
-                                    </Steps>
-                                </div>
-                            </Col>
-                        </Row>
-                    </div>
-                    <div className='reschedule-bottom'>
-                        <Form name="cancel" form={form} onFinish={handleSubmit} layout="vertical">
-                            <Row>
-                                <Col xs={24} sm={24} md={6} lg={6} xl={6}>
-                                    <label for=''>Cancel Reason</label>
-                                    <Form.Item
-                                        name="reason"
-                                        rules={[{ message: 'Please select your reason!', required: true }]}>
-                                        <Select
-                                            showSearch
-                                            style={{ width: '100%' }}
-                                            placeholder="List Of Reasons"
-                                            value={reason} onChange={e => setReason(e)}
-                                            optionFilterProp="children"
-                                            filterOption={(input, option) =>
-                                                option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-                                            }
-                                            filterSort={(optionA, optionB) =>
-                                                optionA.children.toLowerCase().localeCompare(optionB.children.toLowerCase())
-                                            }
-                                        >
-                                            <Option value="Another meeting">Another meeting</Option>
-                                        </Select>
-                                    </Form.Item>
-                                </Col>
-                                <Col xs={24} sm={24} md={12} lg={12} xl={12} push={1}>
-                                    <label for=''>Anything Skillingo could have done to avoid your cancellation?</label>
-                                    <Form.Item
-                                        name="suggestion"
-                                        rules={[{ message: 'Please enter your suggestion!', required: true }]}>
-                                        <Input.TextArea placeholder='Text area(Optional)' id='suggestion'
-                                            value={suggestion} onChange={e => setSuggestion(e.target.value)} />
+                    </div> */}
+                            <div className='scheduledInterview-status'>
+                                <Row>
+                                    <Col xs={24} sm={24} md={3} lg={3} xl={3}>
+                                        <img alt="example" src={fullstack} />
+                                    </Col>
+                                    <Col xs={24} sm={24} md={4} lg={4} xl={4}>
+                                        <div className="assigned-details">
+                                            <h4>{interviewData.companyname}</h4>
+                                            <h3>{interviewData.companyname} | {moment(interviewData.date).format('DD MMM')} {interviewData.time}</h3>
+                                            <h5>Interviewer Mr.{interviewData.name} has been assigned</h5>
+                                        </div>
+                                    </Col>
+                                    <Col xs={24} sm={24} md={15} lg={16} xl={16}>
+                                        <div className='stpes-completed-large'>
+                                            <Steps size="small" current={assigendStatus}>
+                                                <Step description="INTERVIEWER ASSIGNED" />
+                                                <Step description="PAYMENT COMPLETED" />
+                                                <Step description="SYSTEM CHECK" />
+                                                <Step description="PREP TEST" />
+                                                <Step description="BEGIN INTERVIEW" />
+                                            </Steps>
+                                        </div>
+                                        <div className='stpes-completed-small'>
+                                            <Steps size="small" direction="vertical" current={assigendStatus}>
+                                                <Step description="INTERVIEWER ASSIGNED" />
+                                                <Step description="PAYMENT COMPLETED" />
+                                                <Step description="SYSTEM CHECK" />
+                                                <Step description="PREP TEST" />
+                                                <Step description="BEGIN INTERVIEW" />
+                                            </Steps>
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </div>
+                            <div className='reschedule-bottom'>
+                                <Form name="cancel" form={form} onFinish={handleSubmit} layout="vertical">
+                                    <Row>
+                                        <Col xs={24} sm={24} md={6} lg={6} xl={6}>
+                                            <label for=''>Cancel Reason</label>
+                                            <Form.Item
+                                                name="reason"
+                                                rules={[{ message: 'Please select your reason!', required: true }]}>
+                                                <Select
+                                                    showSearch
+                                                    style={{ width: '100%' }}
+                                                    placeholder="List Of Reasons"
+                                                    value={reason} onChange={e => setReason(e)}
+                                                    optionFilterProp="children"
+                                                    filterOption={(input, option) =>
+                                                        option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+                                                    }
+                                                    filterSort={(optionA, optionB) =>
+                                                        optionA.children.toLowerCase().localeCompare(optionB.children.toLowerCase())
+                                                    }
+                                                >
+                                                    <Option value="Another meeting">Another meeting</Option>
+                                                </Select>
+                                            </Form.Item>
+                                        </Col>
+                                        <Col xs={24} sm={24} md={12} lg={12} xl={12} push={1}>
+                                            <label for=''>Anything Skillingo could have done to avoid your cancellation?</label>
+                                            <Form.Item
+                                                name="suggestion"
+                                                rules={[{ message: 'Please enter your suggestion!', required: true }]}>
+                                                <Input.TextArea placeholder='Text area(Optional)' id='suggestion'
+                                                    value={suggestion} onChange={e => setSuggestion(e.target.value)} />
 
-                                    </Form.Item>
-                                </Col>
+                                            </Form.Item>
+                                        </Col>
 
-                                <Col xs={24} sm={24} md={3} lg={3} xl={3} push={2}>
-                                    <div className='btn-div reschedule-btn'>
-                                        <Row>
-                                            <Col xs={12} sm={12} md={24} lg={24} xl={24}>
-                                                <div ><button id='cancel' className='cancel-btn'>cancel  <i><ArrowRightOutlined /></i>
-                                                </button></div>
-                                            </Col>
+                                        <Col xs={24} sm={24} md={3} lg={3} xl={3} push={2}>
+                                            <div className='btn-div reschedule-btn'>
+                                                <Row>
+                                                    <Col xs={12} sm={12} md={24} lg={24} xl={24}>
+                                                        <div ><button id='cancel' className='cancel-btn'>cancel  <i><ArrowRightOutlined /></i>
+                                                        </button></div>
+                                                    </Col>
 
-                                        </Row>
-                                    </div>
-                                </Col>
-                            </Row>
-                        </Form>
+                                                </Row>
+                                            </div>
+                                        </Col>
+                                    </Row>
+                                </Form>
 
-                    </div>
+                            </div>
+                        </div>
+                    }
                 </div>
-            }
-        </div>
+            </Main>
+        </>
     );
 
 };

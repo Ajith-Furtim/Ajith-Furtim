@@ -10,14 +10,16 @@ import { ProductCard } from '../Style';
 import { updateWishList } from '../../../../redux/product/actionCreator';
 import fullstack from '../../../../../src/assets/imges/c-full-stack.svg';
 import { Cards } from '../../../../components/cards/frame/cards-frame';
+import moment from 'moment';
 
-const ProductCards = ({ product }) => {
-  const { id, companyname, firstname, lastname, date,time,joiurl,status,level } = product;
-  console.log(product)
+const ProductCards = ({ interview }) => {
+  const { id, companyname, firstname, lastname, date,time,joiurl,status,level } = interview;
+  console.log(interview)
   const dispatch = useDispatch();
 
   return (
     <ProductCard style={{ marginBottom: 30 }}>
+        <Link to={{ pathname: "/interviewee/scheduledinterview", state: { data: interview } }}>
       <figure>
         <img src={fullstack} alt={`img${id}`} />
       </figure>
@@ -37,9 +39,10 @@ const ProductCards = ({ product }) => {
           <span className="product-single-price__new">{companyname} </span>
         </p>
         <h4 className='interview-skill'>{level}</h4>
-        <h4 className='justify-content-end  d-flex '>{date} {time}</h4>
+        <h4 className='justify-content-end  d-flex '>{moment(date).format('DD MMM')} {time}</h4>
 
       </figcaption>
+      </Link>
     </ProductCard>
   );
 };

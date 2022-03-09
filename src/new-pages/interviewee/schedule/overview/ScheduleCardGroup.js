@@ -10,7 +10,7 @@ import { Dropdown } from '../../../../components/dropdown/dropdown';
 import userImg from '../../../../../src/assets/imges/user.png';
 
 const UserCardGroup = ({ user }) => {
-  const { title, company, img, icon, content } = user;
+  const {userId, firstName, lastName, interviewerInfo, icon, content } = user;
   return (
     <UserCard>
       <div className="card user-card theme-grid-3">
@@ -22,9 +22,9 @@ const UserCardGroup = ({ user }) => {
             <div className="user-card__info">
               <Heading className="card__name" as="h6">
                 <Link className="name-text" to="#">
-                  {title}
+                  {firstName} {lastName}
                 </Link>
-                <p className="card__designation">{company}</p>
+                <p className="card__designation">{interviewerInfo.companyName}</p>
               </Heading>
               {/* <Dropdown
                 content={
@@ -43,17 +43,17 @@ const UserCardGroup = ({ user }) => {
             </div>
           </div>
           <div className="card__content">
-            <p>{content}</p>
+            <p>{interviewerInfo.description}</p>
           </div>
           <div className="card__info">
             <p className="info-line">
               <span>Rating</span>
-              <span>Experience</span>
+              <span>Amount</span>
             </p>
             <h2 className="info-line">
-              <span> <Rate allowHalf defaultValue={5} disabled /></span>
+              <span> <Rate allowHalf defaultValue={interviewerInfo.overAllRating} disabled /></span>
               <span className="success" style={{ background: 'none !important' }}>
-                10
+              {interviewerInfo.amount}
               </span>
             </h2>
           <div className="sch-btn">

@@ -114,6 +114,9 @@ img.head-menu {
   /* height: 40px !important; */
   border-radius: 50px !important;
 }
+button.ant-btn {
+  border-radius: 50px !important;
+}
 .sidenav-head{
   display: flex;
 }
