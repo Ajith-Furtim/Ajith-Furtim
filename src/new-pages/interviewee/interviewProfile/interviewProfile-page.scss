@@ -1,7 +1,14 @@
+button.go-back-btn  {
+    font-size: 15px !important;
+    height: 36px !important;
+}
 .interviewProfile_page_container{
     width: 100%;
     background-color: #fff;
     overflow: hidden !important;
+    .interviewProfile-container {
+        padding: 25px;
+    }
     .card-box{
         width: 250px;
         height: 300px;

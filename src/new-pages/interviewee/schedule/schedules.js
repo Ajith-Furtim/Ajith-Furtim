@@ -156,7 +156,7 @@ const getFilterCompany = () => {
                             </Cards>
                           }
                         >
-                          <UserCardGroup user={schedule} />
+                          <UserCardGroup schedule={schedule} />
                         </Suspense>
                       </Col>
                     );

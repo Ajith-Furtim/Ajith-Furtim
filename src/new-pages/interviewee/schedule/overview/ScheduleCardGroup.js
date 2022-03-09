@@ -9,8 +9,8 @@ import { Cards } from '../../../../components/cards/frame/cards-frame';
 import { Dropdown } from '../../../../components/dropdown/dropdown';
 import userImg from '../../../../../src/assets/imges/user.png';
 
-const UserCardGroup = ({ user }) => {
-  const {userId, firstName, lastName, interviewerInfo, icon, content } = user;
+const UserCardGroup = ({ schedule }) => {
+  const {userId, firstName, lastName, interviewerInfo, icon, content } = schedule;
   return (
     <UserCard>
       <div className="card user-card theme-grid-3">
@@ -57,9 +57,11 @@ const UserCardGroup = ({ user }) => {
               </span>
             </h2>
           <div className="sch-btn">
+          <Link to={{ pathname: "/interviewee/interviewerprofile", state: { data: schedule } }}>
             <Button size="large" type="primary">
             SCHEDULE   
             </Button>
+            </Link>
           </div>
           </div>
         </Cards>
